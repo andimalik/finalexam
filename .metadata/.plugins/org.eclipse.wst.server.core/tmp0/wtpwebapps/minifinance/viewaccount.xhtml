@@ -22,11 +22,10 @@
 							</f:selectItems>
 							<f:ajax event="change" execute="@form"
 								listener="#{viewLoanAccountController.retrieveLoanAccountList}"
-								render="loanAccountList"></f:ajax>
+								render="@form"></f:ajax>
 						</h:selectOneMenu>
 						Loan Account
-						<h:selectOneMenu id="loanAccountList"
-							value="#{viewLoanAccountController.loanAccount}">
+						<h:selectOneMenu value="#{viewLoanAccountController.loanAccount}">
 							<f:selectItems
 								value="#{viewLoanAccountController.loanAccountList}"
 								var="loanAccount" itemValue="#{loanAccount.accountNo}"
