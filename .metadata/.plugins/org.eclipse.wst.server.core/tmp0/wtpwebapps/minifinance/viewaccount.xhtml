@@ -20,9 +20,13 @@
 							<f:selectItems value="#{cIFController.ciflist}" var="cifList"
 								itemValue="#{cifList.cifNo}" itemLabel="#{cifList.cifNo}">
 							</f:selectItems>
+							<f:ajax event="change" execute="@form"
+								listener="#{viewLoanAccountController.retrieveLoanAccountList}"
+								render="loanAccountList"></f:ajax>
 						</h:selectOneMenu>
 						Loan Account
-						<h:selectOneMenu value="#{viewLoanAccountController.loanAccount}">
+						<h:selectOneMenu id="loanAccountList"
+							value="#{viewLoanAccountController.loanAccount}">
 							<f:selectItems
 								value="#{viewLoanAccountController.loanAccountList}"
 								var="loanAccount" itemValue="#{loanAccount.accountNo}"
