@@ -1,0 +1,40 @@
+package id.co.skyforce.finance.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import id.co.skyforce.finance.model.CIF;
+import id.co.skyforce.finance.model.LoanAccount;
+import id.co.skyforce.finance.service.CIFService;
+import id.co.skyforce.finance.service.LoanAccountService;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+
+@ManagedBean
+@ViewScoped
+public class ViewLoanAccountController {
+	private List<CIF> cifList = new ArrayList<CIF>();
+	private CIF cif;
+	private CIFService cifService = new CIFService();
+
+	private String loanAccountNo;
+	private List<LoanAccount> loanAccountList = new ArrayList<LoanAccount>();
+	private LoanAccount loanAccount;
+	private LoanAccountService loanAccountService = new LoanAccountService();
+
+	public ViewLoanAccountController() {
+		this.cif = new CIF();
+		this.loanAccount = new LoanAccount();
+		this.cifList = this.cifService.getAllCif();
+	}
+
+	public retrieveLoanAccountList() throws Exception {
+		this.loanAccountList = this.cif.getLoanAccounts();
+	}
+
+	public void retrieveLoanAccount() throws Exception {
+		this.loanAccount = loanAccountService
+				.getLoanAccount(this.loanAccountNo);
+	}
+}

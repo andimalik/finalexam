@@ -1,0 +1,52 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<h:outputStylesheet library="css" name="table-style.css" />
+</h:head>
+<h:body>
+	<ui:composition template="/template/menucifbootstrap.xhtml">
+
+		<ui:define name="content">
+			<center>
+				<h:form>
+					<h:messages />
+					<h:panelGrid columns="2" border="0">
+						CIF
+						<h:selectOneMenu value="#{viewLoanAccountController.cif}">
+							<f:selectItems value="#{cIFController.ciflist}" var="cifList"
+								itemValue="#{cifList.cifNo}" itemLabel="#{cifList.cifNo}">
+							</f:selectItems>
+						</h:selectOneMenu>
+						LoanAccount
+						<h:selectOneMenu value="#{viewLoanAccountController.loanAccount}">
+							<f:selectItems
+								value="#{viewLoanAccountController.loanAccountList}"
+								var="loanAccount" itemValue="#{loanAccount.accountNo}"
+								itemLabel="#{loanAccount.accountNo}">
+							</f:selectItems>
+						</h:selectOneMenu>
+		Account No.
+		<h:inputText value="#{loanAccountController.accountNo}" />
+		Plafond
+		<h:inputText value="#{loanAccountController.plafond}" />
+		Tenure
+		<h:inputText value="#{loanAccountController.tenure}" />
+		Interest rate
+		<h:inputText value="#{loanAccountController.interestRate}" />
+		Interest type
+		<h:selectOneMenu value="#{loanAccountController.interestType}">
+							<f:selectItem itemValue="F" itemLabel="Flat" />
+							<f:selectItem itemValue="E" itemLabel="Efektif" />
+							<f:selectItem itemValue="A" itemLabel="Anuitas" />
+						</h:selectOneMenu>
+					</h:panelGrid>
+				</h:form>
+			</center>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
