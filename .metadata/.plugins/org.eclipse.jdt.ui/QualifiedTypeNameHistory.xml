@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ViewScoped"/>
+<fullyQualifiedTypeName name="id.co.skyforce.finance.model.LoanAccount"/>
+<fullyQualifiedTypeName name="id.co.skyforce.finance.controller.ViewLoanAccountController"/>
+<fullyQualifiedTypeName name="id.co.skyforce.finance.model.CIF"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="id.co.skyforce.finance.service.LoanAccountService"/>
+<fullyQualifiedTypeName name="id.co.skyforce.finance.service.CIFService"/>
+</qualifiedTypeNameHistroy>

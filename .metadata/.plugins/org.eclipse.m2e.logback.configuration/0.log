@@ -259,3 +259,8 @@
 2014-10-29 16:15:38,823 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
 2014-10-29 16:15:38,823 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2014-10-29 16:15:38,823 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\total\git\finalexam\minifinance\src\test\resources
+2014-10-29 16:21:22,853 [Worker-30] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: id.co.skyforce:minifinance:1.0-SNAPSHOT @ C:\Users\total\git\finalexam\minifinance\pom.xml.
+2014-10-29 16:21:24,413 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-10-29 16:21:24,423 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2014-10-29 16:21:24,423 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-10-29 16:21:24,423 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\total\git\finalexam\minifinance\src\test\resources
