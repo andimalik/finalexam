@@ -23,14 +23,15 @@ public class ViewLoanAccountController {
 	private LoanAccount loanAccount;
 	private LoanAccountService loanAccountService = new LoanAccountService();
 
-	public ViewLoanAccountController() {
+	public ViewLoanAccountController() throws Exception {
 		this.cifList = this.cifService.getAllCif();
 		this.cif = this.cifList.get(0);
-		this.loanAccountList = this.cif.getLoanAccounts();
+		this.retrieveLoanAccountList();
 	}
 
 	public void retrieveLoanAccountList() throws Exception {
-		this.loanAccountList = this.cif.getLoanAccounts();
+		this.loanAccountList = this.loanAccountService
+				.getLoanAccounts(this.cif);
 	}
 
 	public void retrieveLoanAccount() throws Exception {
